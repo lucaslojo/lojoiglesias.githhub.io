@@ -11,11 +11,15 @@ body {
     animation: shineEffect 6s infinite alternate;
     color: black;
     font-family: "Courier New", Courier, monospace;
-    text-align: center;
+    text-align: justify; /* Justify the text */
+    text-justify: inter-word; /* Improve spacing between words */
+    text-align-last: justify; /* Justify the last line of text */
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px; /* Add padding to avoid text touching the edges */
+    box-sizing: border-box; /* Ensure padding is included in height/width */
 }
 
 /* Shiny Effect Animation */
