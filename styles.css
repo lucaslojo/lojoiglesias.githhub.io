@@ -11,11 +11,12 @@ body {
     animation: shineEffect 6s infinite alternate;
     color: black;
     font-family: Andale Mono, sans-serif;
-    text-align: center;
+    text-align: left;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    line-height: 18px;
 }
 
 /* Shiny Effect Animation */
@@ -39,23 +40,23 @@ h1:hover {
 }
 
 #contact-info {
-    display: none;
-    margin-top: 20px;
+    display: none; /* Hidden by default */
+    margin-top: 10px; /* Space between "LLI" and contact info */
     font-size: 1.2rem;
     text-align: left; /* Align text to the left */
-    width: 100%; /* Ensure it takes full width */
+    opacity: 0; /* Start with text hidden */
+    transform: translateY(-10px); /* Slight upward offset */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#contact-info.show {
+    display: block; /* Show the contact info */
+    opacity: 1; /* Make it fully visible */
+    transform: translateY(0); /* Move it to its final position */
 }
 
 #contact-info p {
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    line-height: 0.8; /* Reduce line height to remove spacing */
-}
-
-#contact-info span {
-    display: block; /* Each span will be on a new line */
-    margin: 0; /* Remove margin */
-    padding: 0; /* Remove padding */
+    margin: 5px 0; /* Spacing between lines */
 }
 
 a {
@@ -65,4 +66,25 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem; /* Smaller font size for mobile */
+    }
+
+    #contact-info {
+        font-size: 1rem; /* Smaller font size for mobile */
+        text-align: center; /* Center-align text on mobile */
+        margin-top: 20px; /* Add more space between "LLI" and contact info */
+    }
+
+    .container {
+        padding: 20px; /* Add padding to the sides for better spacing */
+    }
+
+    body {
+        text-align: center; /* Center-align everything on mobile */
+    }
 }
