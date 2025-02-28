@@ -16,6 +16,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    line-height: 18px;
 }
 
 /* Shiny Effect Animation */
@@ -26,12 +27,14 @@ body {
 
 .container {
     position: relative;
+    text-align: center; /* Center-align everything */
 }
 
 h1 {
     font-size: 4rem;
     cursor: pointer;
     transition: opacity 0.3s ease-in-out;
+    margin: 0; /* Remove default margin */
 }
 
 h1:hover {
@@ -39,23 +42,25 @@ h1:hover {
 }
 
 #contact-info {
-    display: none;
-    margin-top: 20px;
+    display: none; /* Hidden by default */
+    position: absolute; /* Position absolutely relative to .container */
+    top: 100%; /* Position below "LLI" */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for exact centering */
+    margin-top: 10px; /* Space between "LLI" and contact info */
     font-size: 1.2rem;
     text-align: left; /* Align text to the left */
-    width: 100%; /* Ensure it takes full width */
+    opacity: 0; /* Start with text hidden */
+    transition: opacity 0.3s ease-in-out;
+}
+
+#contact-info.show {
+    display: block; /* Show the contact info */
+    opacity: 1; /* Make it fully visible */
 }
 
 #contact-info p {
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    line-height: 0.8; /* Reduce line height to remove spacing */
-}
-
-#contact-info span {
-    display: block; /* Each span will be on a new line */
-    margin: 0; /* Remove margin */
-    padding: 0; /* Remove padding */
+    margin: 5px 0; /* Spacing between lines */
 }
 
 a {
