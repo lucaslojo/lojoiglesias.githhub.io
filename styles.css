@@ -47,7 +47,7 @@ h1:hover {
     top: 100%; /* Position below "LLI" */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Adjust for exact centering */
-    margin-top: 10px; /* Space between "LLI" and contact info */
+    margin-top: 20px; /* Space between "LLI" and contact info */
     font-size: 1.2rem;
     text-align: left; /* Align text to the left */
     opacity: 0; /* Start with text hidden */
@@ -80,7 +80,7 @@ a:hover {
 
     #contact-info {
         font-size: 1rem; /* Smaller font size for mobile */
-        text-align: center; /* Center-align text on mobile */
+        text-align: left; /* Center-align text on mobile */
         margin-top: 20px; /* Add more space between "LLI" and contact info */
     }
 
@@ -89,6 +89,6 @@ a:hover {
     }
 
     body {
-        text-align: center; /* Center-align everything on mobile */
+        text-align: left; /* Center-align everything on mobile */
     }
 }
