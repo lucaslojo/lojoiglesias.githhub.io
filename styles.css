@@ -11,12 +11,11 @@ body {
     animation: shineEffect 6s infinite alternate;
     color: black;
     font-family: Andale Mono, sans-serif;
-    text-align: left;
+    text-align: center;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    line-height: 18px;
 }
 
 /* Shiny Effect Animation */
@@ -40,23 +39,23 @@ h1:hover {
 }
 
 #contact-info {
-    display: none; /* Hidden by default */
-    margin-top: 10px; /* Space between "LLI" and contact info */
+    display: none;
+    margin-top: 20px;
     font-size: 1.2rem;
     text-align: left; /* Align text to the left */
-    opacity: 0; /* Start with text hidden */
-    transform: translateY(-10px); /* Slight upward offset */
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-#contact-info.show {
-    display: block; /* Show the contact info */
-    opacity: 1; /* Make it fully visible */
-    transform: translateY(0); /* Move it to its final position */
+    width: 100%; /* Ensure it takes full width */
 }
 
 #contact-info p {
-    margin: 5px 0; /* Spacing between lines */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    line-height: 0.8; /* Reduce line height to remove spacing */
+}
+
+#contact-info span {
+    display: block; /* Each span will be on a new line */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
 }
 
 a {
