@@ -8,7 +8,11 @@
     <script>
         function toggleInfo() {
             var info = document.getElementById("contact-info");
-            info.classList.toggle("show"); // Toggle the "show" class
+            if (info.style.display === "none") {
+                info.style.display = "block";
+            } else {
+                info.style.display = "none";
+            }
         }
     </script>
 </head>
@@ -16,10 +20,12 @@
     <div class="container">
         <h1 id="lli" onclick="toggleInfo()">LLI</h1>
         <div id="contact-info">
-            <p>LUCAS LOJO IGLESIAS</p>
-            <p><a href="mailto:lucaslojoiglesias@gmail.com">lucaslojoiglesias@gmail.com</a></p>
-            <p>+4560536745</p>
-            <p>København, Zürich, Santiago de Compostela</p>
+            <p>
+                <span>LUCAS LOJO IGLESIAS</span><br>
+                <span><a href="mailto:lucaslojoiglesias@gmail.com">lucaslojoiglesias@gmail.com</a></span><br>
+                <span>+4560536745</span><br>
+                <span>København, Zürich, Santiago de Compostela</span>
+            </p>
         </div>
     </div>
 </body>
