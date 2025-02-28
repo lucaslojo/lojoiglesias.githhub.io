@@ -75,8 +75,12 @@ a:hover {
 
     #contact-info {
         font-size: 1rem; /* Smaller font size for mobile */
-        text-align: left; /* Center-align text on mobile */
+        text-align: left; /* Left-align text */
         margin-top: 20px; /* Add more space between "LLI" and contact info */
+        width: 80%; /* Limit width for better readability */
+        max-width: 300px; /* Maximum width for the contact info */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Adjust for exact centering */
     }
 
     .container {
